@@ -1,4 +1,3 @@
-var playp = document.querySelector("#play");
 var musicIndex = Math.floor(Math.random()*list.length);
 var aud = new Audio(`./assets/music/${list[musicIndex].music}`);
 
@@ -7,6 +6,9 @@ function musicSRC(i) {
     if (!aud.paused) aud.pause(); // Stop the current audio if playing
     aud.src = `./assets/music/${list[i].music}`; // Update the source of the existing Audio object
     aud.load(); // Load the new source
+    if(playp.classList.contains("paus")){
+        aud.play();
+    }
     aud.addEventListener("ended", endHandle); 
 }
 
@@ -19,7 +21,7 @@ function image(i) {
 
 // Load initial image
 image(musicIndex);
-
+var playp=document.querySelector(".fa-play")
 // Play/Pause button click event
 playp.addEventListener("click", () => {
     if (playp.classList.contains("paus")) {
@@ -210,3 +212,49 @@ setInterval(() => {
     document.querySelector("#volume_show").innerHTML = volumeValue;
     aud.volume = volumeValue / 100;
   };
+
+var musicList=document.querySelector(".music-list");
+document.querySelector(".fa-bars").addEventListener("click",()=>{
+  musicList.classList.add("show");
+  
+})
+document.querySelector(".fa-x").addEventListener("click",()=>{
+    musicList.classList.remove("show");
+})
+
+function populateMusic(){
+    const musicList = document.querySelector(".music-list ol");
+    musicList.innerHTML = ""; // Clear the list
+
+    for(var i=0;i<list.length;i++){
+        (function(index) {
+            const ms = new Audio(`./assets/music/${list[index].music}`);
+            ms.addEventListener('loadedmetadata', function() {
+                var min=Math.floor(ms.duration / 60);
+                var sec=Math.floor(ms.duration % 60);
+
+                const listItem = document.createElement("li");
+                listItem.innerHTML =` 
+                    <div class="row">
+                        <span>${list[index].name}</span>
+                        <p>${list[index].auth}</p>
+                    </div>
+                    <span class="audio-duration">${min}:${sec.toString().padStart(2,'0')}</span>
+                `;
+
+                listItem.addEventListener("click",()=>{
+
+                        musicSRC(index);
+                        image(index);
+                        musicIndex=index;
+                    
+                })
+                musicList.appendChild(listItem);
+                musicList.appendChild(document.createElement("hr")); // Add a horizontal rule
+            });
+            ms.load();
+        })(i);
+    }
+
+}
+window.onload=populateMusic();

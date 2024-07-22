@@ -43,6 +43,7 @@ body {
 }
 
 .container {
+    position: relative;
     background-color: #e7e7e7;
     height: 550px;
     width: 400px;
@@ -230,6 +231,90 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 0 5px;
     animation: animate 1s linear infinite;
 }
+.music-list ol{
+    margin: 10px 0;
+    max-height: 260px;
+    overflow-y: auto;
+}
+
+.music-list ol::-webkit-scrollbar{
+    width: 0;
+}
+.music-list::-webkit-scrollbar{
+    width: 0;
+}
+
+.music-list ol li{
+    display: flex;
+    cursor: pointer;
+    margin: 5px 25px -10px -10px;
+    color: var(--lightblack);
+    border-bottom: 1px solid #e5e5e5;
+    justify-content: space-between;
+}
+
+.music-list ol li:last-child{
+    border-bottom: 0px;
+}
+
+.music-list ol li .row span{
+    font-size: 15px;
+}
+
+.music-list ol li .row p{
+    opacity: 0.9;
+    position: relative;
+    top: -10px;
+}
+
+ol li .audio-duration{
+    font-size: 14px;
+}
+
+.music-list{
+    position: absolute;
+    background-color: #e7e7e7;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    opacity: 0;
+    min-height: 240px;
+    max-height: 300px;
+    pointer-events: none;
+    border-radius: 15px;
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+    transition: all 0.15s ease-out;
+    overflow-y: auto;
+}
+.rowed{
+    display: flex;
+    padding-top: 15px;
+}
+.rowed i{
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.rowed span{
+    font-size: large;
+    font-weight: bolder;
+    margin: 0px 220px 0px 0px;
+    position: relative;
+    left: -20px;
+    white-space: nowrap;
+    top: -3px;
+}
+
+.music-list.show{
+    bottom: 0;
+    opacity: 1;
+    pointer-events:all;
+}
+hr{
+    border-bottom: none;
+    width: 300px;
+    margin:-10px 20px 10px -10px;
+}
 
 @keyframes animate {
     30% {
@@ -342,8 +427,15 @@ input[type="range"]::-webkit-slider-thumb {
         font-size: 40px;
         position: relative;
     }
-    
-    
+   
+    .rowed span{
+        font-size: large;
+        font-weight: bolder;
+        margin: 0px 140px 0px 0px;
+        position: relative;
+        left: -20px;
+        white-space: nowrap;
+        top: -3px;
+    }
     
 }
-  

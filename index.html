@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>DMusic Player</title>
+    <title>Music Player</title>
+    <link rel="icon" href="./assets/channels4_profile.jpg" type="image/gif" sizes="16x16">
 </head>
 
 <body>
@@ -33,9 +34,6 @@
                 <span class="stroke"></span>
             </div>
     
-            <h2 id="music-title"></h2>
-            <h3 id="music-artist"></h3>
-    
             <div class="player-progress" id="player-progress">
                 <div class="progress" id="progress"></div>
                 <div class="music-duration">
@@ -56,9 +54,33 @@
                 <i class="fa-solid fa-forward" title="Next" id="next"></i>
                 <i class="fa-solid fa-bars"></i>
             </div>
-    
+
             
+            <div class="music-list">
+                <div class="header">
+                    <div class="rowed">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Music list</span>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    
+                </div>
+                <ol>
+                    <!-- here li list are coming from js -->
     
+                    <li>
+                        <div class="row">
+                            <span>Despacito</span>
+                            <p>Justin</p>
+                        </div>
+                        <span class="audio-duration">2:34</span>
+                    </li>
+                    <hr>                    
+                    
+                    
+                </ol>
+            </div>
+
         </div>
 
 
