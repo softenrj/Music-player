@@ -438,4 +438,9 @@ hr{
         top: -3px;
     }
     
+hr{
+    border-bottom: none;
+    width: 250px;
+    margin:-10px 20px 10px -10px;
+}
 }
