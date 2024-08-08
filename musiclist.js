@@ -94,6 +94,12 @@ let list=[
         auth: "Song by Eminem",
         music: "16.mp3",
         img: "16.jpg"
+    },
+    {
+        name: "Expert Jatt",
+        auth: "Song by NAWAB",
+        music: "17.mp3",
+        img: "17.jpg"
     }
     
 ]
