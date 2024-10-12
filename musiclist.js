@@ -100,6 +100,12 @@ let list=[
         auth: "Song by NAWAB",
         music: "17.mp3",
         img: "17.jpg"
+    },
+    {
+        name: "Babbu - Gaddi Red Challenger (Official Music Video)",
+        auth: "Written and Performed by Babbu",
+        music: "18.mp3",
+        img: "18.gif"
     }
     
 ]
