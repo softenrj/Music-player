@@ -116,11 +116,38 @@ h3 {
 }
 
 .progress {
-    background-color: #212121;
+    background-image: linear-gradient(
+        60deg,
+        hsl(0deg 100% 50%) 0%,
+        hsl(358deg 100% 50%) 2%,
+        hsl(357deg 100% 50%) 5%,
+        hsl(355deg 100% 50%) 9%,
+        hsl(354deg 100% 50%) 15%,
+        hsl(352deg 100% 50%) 20%,
+        hsl(351deg 100% 50%) 25%,
+        hsl(349deg 100% 50%) 30%,
+        hsl(347deg 100% 50%) 35%,
+        hsl(346deg 100% 50%) 40%,
+        hsl(344deg 100% 50%) 44%,
+        hsl(343deg 100% 50%) 49%,
+        hsl(341deg 100% 50%) 53%,
+        hsl(340deg 100% 50%) 57%,
+        hsl(338deg 100% 50%) 61%,
+        hsl(336deg 100% 50%) 65%,
+        hsl(335deg 100% 50%) 69%,
+        hsl(333deg 100% 50%) 73%,
+        hsl(332deg 100% 50%) 77%,
+        hsl(330deg 100% 50%) 81%,
+        hsl(328deg 100% 50%) 85%,
+        hsl(327deg 100% 50%) 89%,
+        hsl(325deg 100% 50%) 93%,
+        hsl(324deg 100% 50%) 96%,
+        hsl(322deg 100% 50%) 100%
+      );
     border-radius: 5px;
     height: 100%;
     width: 0%;
-    transition: width 0.1s linear;
+    transition: width 0.8ms linear;
 }
 
 .music-duration {
