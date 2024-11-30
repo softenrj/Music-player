@@ -108,10 +108,15 @@ let list=[
         img: "18.gif"
     },
     {
-        name: "Bill Withers - Just The Two Of Us",
+        name: "Just The Two Of Us",
         auth: "Bill Withers",
         music: "19.mp3",
         img: "19.gif"
+    },{
+        name: "write this down",
+        auth: "2pac feat. the notorious b.i.g. & eazy-e & ice cube ",
+        music: "20.mp3",
+        img: "20.gif"
     }
     
 ]
