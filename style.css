@@ -51,7 +51,8 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease;
 }
-.containerwave{
+
+.containerwave {
     height: 600px;
 }
 
@@ -66,7 +67,8 @@ body {
     top: 40px;
     left: 50px;
 }
-.player-imgwave{
+
+.player-imgwave {
     top: 30px;
 }
 
@@ -116,34 +118,32 @@ h3 {
 }
 
 .progress {
-    background-image: linear-gradient(
-        60deg,
-        hsl(0deg 100% 50%) 0%,
-        hsl(358deg 100% 50%) 2%,
-        hsl(357deg 100% 50%) 5%,
-        hsl(355deg 100% 50%) 9%,
-        hsl(354deg 100% 50%) 15%,
-        hsl(352deg 100% 50%) 20%,
-        hsl(351deg 100% 50%) 25%,
-        hsl(349deg 100% 50%) 30%,
-        hsl(347deg 100% 50%) 35%,
-        hsl(346deg 100% 50%) 40%,
-        hsl(344deg 100% 50%) 44%,
-        hsl(343deg 100% 50%) 49%,
-        hsl(341deg 100% 50%) 53%,
-        hsl(340deg 100% 50%) 57%,
-        hsl(338deg 100% 50%) 61%,
-        hsl(336deg 100% 50%) 65%,
-        hsl(335deg 100% 50%) 69%,
-        hsl(333deg 100% 50%) 73%,
-        hsl(332deg 100% 50%) 77%,
-        hsl(330deg 100% 50%) 81%,
-        hsl(328deg 100% 50%) 85%,
-        hsl(327deg 100% 50%) 89%,
-        hsl(325deg 100% 50%) 93%,
-        hsl(324deg 100% 50%) 96%,
-        hsl(322deg 100% 50%) 100%
-      );
+    background-image: linear-gradient(60deg,
+            hsl(0deg 100% 50%) 0%,
+            hsl(358deg 100% 50%) 2%,
+            hsl(357deg 100% 50%) 5%,
+            hsl(355deg 100% 50%) 9%,
+            hsl(354deg 100% 50%) 15%,
+            hsl(352deg 100% 50%) 20%,
+            hsl(351deg 100% 50%) 25%,
+            hsl(349deg 100% 50%) 30%,
+            hsl(347deg 100% 50%) 35%,
+            hsl(346deg 100% 50%) 40%,
+            hsl(344deg 100% 50%) 44%,
+            hsl(343deg 100% 50%) 49%,
+            hsl(341deg 100% 50%) 53%,
+            hsl(340deg 100% 50%) 57%,
+            hsl(338deg 100% 50%) 61%,
+            hsl(336deg 100% 50%) 65%,
+            hsl(335deg 100% 50%) 69%,
+            hsl(333deg 100% 50%) 73%,
+            hsl(332deg 100% 50%) 77%,
+            hsl(330deg 100% 50%) 81%,
+            hsl(328deg 100% 50%) 85%,
+            hsl(327deg 100% 50%) 89%,
+            hsl(325deg 100% 50%) 93%,
+            hsl(324deg 100% 50%) 96%,
+            hsl(322deg 100% 50%) 100%);
     border-radius: 5px;
     height: 100%;
     width: 0%;
@@ -167,9 +167,11 @@ h3 {
     margin-left: 115px;
     transition: all 0.5s ease;
 }
-.player-controlswave,.player-progresswave{
+
+.player-controlswave,
+.player-progresswave {
     margin-top: 30px;
-    
+
 }
 
 .fa-solid {
@@ -212,9 +214,11 @@ h3 {
 .volume i:hover {
     background: rgba(109, 109, 109, 0.1);
 }
-.loop{
+
+.loop {
     filter: brightness(40%);
 }
+
 .volume #volume_show {
     padding: 8px 12px;
     margin: 0 5px 0 0;
@@ -250,7 +254,7 @@ input[type="range"]::-webkit-slider-thumb {
     transition: all 0.5s ease;
 }
 
-.loader .stroke{
+.loader .stroke {
     background: #f1f1f1;
     height: 120%;
     width: 8px;
@@ -258,20 +262,22 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 0 5px;
     animation: animate 1s linear infinite;
 }
-.music-list ol{
+
+.music-list ol {
     margin: 10px 0;
     max-height: 260px;
     overflow-y: auto;
 }
 
-.music-list ol::-webkit-scrollbar{
-    width: 0;
-}
-.music-list::-webkit-scrollbar{
+.music-list ol::-webkit-scrollbar {
     width: 0;
 }
 
-.music-list ol li{
+.music-list::-webkit-scrollbar {
+    width: 0;
+}
+
+.music-list ol li {
     display: flex;
     cursor: pointer;
     margin: 5px 25px -10px -10px;
@@ -280,49 +286,51 @@ input[type="range"]::-webkit-slider-thumb {
     justify-content: space-between;
 }
 
-.music-list ol li:last-child{
+.music-list ol li:last-child {
     border-bottom: 0px;
 }
 
-.music-list ol li .row span{
+.music-list ol li .row span {
     font-size: 15px;
 }
 
-.music-list ol li .row p{
+.music-list ol li .row p {
     opacity: 0.9;
     position: relative;
     top: -10px;
 }
 
-ol li .audio-duration{
+ol li .audio-duration {
     font-size: 14px;
 }
 
-.music-list{
+.music-list {
+    transition: height 0.3s ease, opacity 0.3s ease;
     position: absolute;
     background-color: #e7e7e7;
     width: 100%;
     left: 0;
     bottom: 0px;
     opacity: 0;
-    min-height: 240px;
-    max-height: 300px;
+    height: 0px;
     pointer-events: none;
     border-radius: 15px;
-    box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.15s ease-out;
     overflow-y: auto;
 }
-.rowed{
+
+.rowed {
     display: flex;
     padding-top: 15px;
 }
-.rowed i{
+
+.rowed i {
     font-size: 15px;
     padding-left: 10px;
 }
 
-.rowed span{
+.rowed span {
     font-size: large;
     font-weight: bolder;
     margin: 0px 220px 0px 0px;
@@ -332,12 +340,15 @@ ol li .audio-duration{
     top: -3px;
 }
 
-.music-list.show{
+.music-list.show {
     bottom: 0;
     opacity: 1;
-    pointer-events:all;
+    min-height: 0px;
+    max-height: 300px;
+    pointer-events: all;
 }
-hr{
+
+.music-partition {
     border-bottom: none;
     width: 300px;
     margin:-10px 20px 10px -10px;
@@ -353,50 +364,71 @@ hr{
         height: 50%;
         background: #437793;
     }
-  
+
     100% {
         background: #266a87;
         height: 100%;
     }
 }
 
-.stroke:nth-child(1){
+.stroke:nth-child(1) {
     animation-delay: 0s;
 }
 
-.stroke:nth-child(2){
+.stroke:nth-child(2) {
     animation-delay: 0.6s;
 }
 
-.stroke:nth-child(3){
+.stroke:nth-child(3) {
     animation-delay: 0.2s;
 }
 
-.stroke:nth-child(4){
+.stroke:nth-child(4) {
     animation-delay: 0.4s;
 }
 
-.stroke:nth-child(5){
+.stroke:nth-child(5) {
     animation-delay: 0.8s;
 }
 
-.stroke:nth-child(6){
+.stroke:nth-child(6) {
     animation-delay: 0.4s;
 }
 
-.stroke:nth-child(7){
+.stroke:nth-child(7) {
     animation-delay: 0.2s;
 }
 
-.stroke:nth-child(8){
+.stroke:nth-child(8) {
     animation-delay: 0.6s;
 }
 
-.stroke:nth-child(9){
+.stroke:nth-child(9) {
     animation-delay: 0s;
 }
 
-@media only screen and (max-width: 600px) {
+.close-tab {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .fa-x{
+        display: none;
+    }
+    .close-tab {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+        height: 2px;
+        width: 20%;
+        margin-left: 40%;
+        border-radius: 5px;
+        background-color: rgb(217, 218, 219);
+        cursor: pointer;
+    }
+
     .container {
         background-color: #e7e7e7;
         height: 550x;
@@ -405,12 +437,15 @@ hr{
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         transition: all 0.5s ease;
     }
-    .containerwave{
+
+    .containerwave {
         height: 580px;
     }
+
     .container:hover {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
     }
+
     .player-img {
         width: 260px;
         height: 300px;
@@ -418,9 +453,11 @@ hr{
         top: 40px;
         left: 30px;
     }
-    .player-imgwave{
+
+    .player-imgwave {
         top: 30px;
     }
+
     .player-progress {
         background-color: #fff;
         border-radius: 5px;
@@ -430,6 +467,7 @@ hr{
         width: 85%;
         margin-top: 90px;
     }
+
     .fa-solid {
         font-size: 28px;
         color: #666;
@@ -447,15 +485,18 @@ hr{
         justify-content: center;
         margin-left: 150px;
     }
-    .player-controlswave,.player-progresswave{
+
+    .player-controlswave,
+    .player-progresswave {
         margin-top: 30px;
     }
+
     .play-button {
         font-size: 40px;
         position: relative;
     }
-   
-    .rowed span{
+
+    .rowed span {
         font-size: large;
         font-weight: bolder;
         margin: 0px 140px 0px 0px;
@@ -464,10 +505,10 @@ hr{
         white-space: nowrap;
         top: -3px;
     }
-    
-hr{
-    border-bottom: none;
-    width: 250px;
-    margin:-10px 20px 10px -10px;
-}
+
+    .music-partition {
+        border-bottom: none;
+        width: 250px;
+        margin: -10px 20px 10px -10px;
+    }
 }
