@@ -208,11 +208,11 @@ var soundBar = document.querySelector("#volume-changer");
 
 soundBar.onchange = function () {
     const volumeValue = this.value;
-    console.log(volumeValue);
     document.querySelector("#volume_show").innerHTML = volumeValue;
     aud.volume = volumeValue / 100;
 };
 
+//music list panel
 var musicList = document.querySelector(".music-list");
 document.querySelector(".fa-bars").addEventListener("click", () => {
     musicList.classList.add("show");
@@ -222,6 +222,8 @@ document.querySelector(".fa-bars").addEventListener("click", () => {
 })
 document.querySelector(".fa-x").addEventListener("click", () => {
     musicList.classList.remove("show");
+    musicList.style.height = "0px";
+    musicList.style.opacity = 0;
 })
 
 function populateMusic() {
@@ -295,6 +297,9 @@ if (swipe) {
         const computed_height_value = parseFloat(computed_height);
         if (computed_height_value <= 130) {
             musicList.classList.toggle('show');
+        }else{
+            musicList.style.height="300px";
+            musicList.style.opacity = 1;
         }
     });
 } else {
