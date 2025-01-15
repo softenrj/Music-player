@@ -279,7 +279,8 @@ if (swipe) {
     });
 
     swipe.addEventListener('touchmove', (e) => {
-        const moveY = e.touches[0].clientY;
+        window.requestAnimationFrame(()=>{
+            const moveY = e.touches[0].clientY;
         let distance = startY - moveY + baseHeight;
 
         // Constrain height between min and max
@@ -290,6 +291,7 @@ if (swipe) {
         // Calculate opacity (1 when fully visible, fades to 0 when near minimum height)
         let opacityValue = (distance - minHeight) / (baseHeight - minHeight);
         musicList.style.opacity = Math.max(0, Math.min(1, opacityValue));
+        })
     });
 
     swipe.addEventListener('touchend', () => {
