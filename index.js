@@ -278,7 +278,14 @@ if (swipe) {
         startY = e.touches[0].clientY;
     });
 
+    //for performance
+    const throttle = 16;//60fps
+    let lastExecutionTime = 0;
+
     swipe.addEventListener('touchmove', (e) => {
+        const now = Date.now();
+        if(now - lastExecutionTime < throttle) return;
+        lastExecutionTime = now;
         window.requestAnimationFrame(()=>{
             const moveY = e.touches[0].clientY;
         let distance = startY - moveY + baseHeight;
