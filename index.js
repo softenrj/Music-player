@@ -265,7 +265,7 @@ function populateMusic() {
 }
 
 //swipe gesture
-const swipe = document.querySelector('.close-tab');
+const swipe = document.querySelector('.close-tab-div');
 
 if (swipe) {
     let startY = 0;
