@@ -148,7 +148,7 @@ h3 {
     border-radius: 5px;
     height: 100%;
     width: 0%;
-    transition: width 0.8ms linear;
+    transition: width 50ms linear;
 }
 
 .music-duration {
