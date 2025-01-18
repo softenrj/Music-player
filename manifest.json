@@ -1,0 +1,19 @@
+{
+    "name": "Soften Web App",
+    "short_name": "Soften-music-app",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "./assets/Logo/Music.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/Logo/Music.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
